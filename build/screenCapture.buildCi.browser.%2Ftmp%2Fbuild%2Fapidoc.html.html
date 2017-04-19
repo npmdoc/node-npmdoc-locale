@@ -1,0 +1,714 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/florrain/locale">locale (v0.1.0)</a>
+</h1>
+<h4>Browser locale negotiation for node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.locale">module locale</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.locale">
+            function <span class="apidocSignatureSpan"></span>locale
+            <span class="apidocSignatureSpan">(supported, def)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locale">
+            function <span class="apidocSignatureSpan">locale.</span>Locale
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales">
+            function <span class="apidocSignatureSpan">locale.</span>Locales
+            <span class="apidocSignatureSpan">(str, def)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">locale.</span>Locale.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">locale.</span>Locales.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.locale.Locale">module locale.Locale</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locale.Locale">
+            function <span class="apidocSignatureSpan">locale.</span>Locale
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">locale.Locale.</span>default</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.locale.Locale.prototype">module locale.Locale.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locale.prototype.toJSON">
+            function <span class="apidocSignatureSpan">locale.Locale.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locale.prototype.toString">
+            function <span class="apidocSignatureSpan">locale.Locale.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.locale.Locales">module locale.Locales</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.Locales">
+            function <span class="apidocSignatureSpan">locale.</span>Locales
+            <span class="apidocSignatureSpan">(str, def)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.locale.Locales.prototype">module locale.Locales.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.best">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>best
+            <span class="apidocSignatureSpan">(locales)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.index">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>index
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.push">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>push
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.sort">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>sort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.toJSON">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.locale.Locales.prototype.toString">
+            function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">locale.Locales.prototype.</span>length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">locale.Locales.prototype.</span>_index</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.locale" id="apidoc.module.locale">module locale</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.locale.locale" id="apidoc.element.locale.locale">
+        function <span class="apidocSignatureSpan"></span>locale
+        <span class="apidocSignatureSpan">(supported, def)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">locale = function (supported, def) {
+  if (!(supported instanceof Locales)) {
+    supported = new Locales(supported, def);
+    supported.index();
+  }
+  return function(req, res, next) {
+    var bestLocale, locales;
+    locales = new Locales(req.headers["accept-language"]);
+    bestLocale = locales.best(supported);
+    req.locale = String(bestLocale);
+    req.rawLocale = bestLocale;
+    return next();
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locale" id="apidoc.element.locale.Locale">
+        function <span class="apidocSignatureSpan">locale.</span>Locale
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Locale(str) {
+  var country, language, match, normalized;
+  if (!(match = str != null ? str.match(/[a-z]+/gi) : void 0)) {
+    return;
+  }
+  language = match[0], country = match[1];
+  this.code = str;
+  this.language = language.toLowerCase();
+  if (country) {
+    this.country = country.toUpperCase();
+  }
+  normalized = [this.language];
+  if (this.country) {
+    normalized.push(this.country);
+  }
+  this.normalized = normalized.join("_");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+API
+---
+
+### locale(supportedLocales)
+
+This module exports a function that can be used as Express/Connect middleware. It takes one argument, a list of supported locales
+, and adds a `locale` property to incoming HTTP requests, reflecting the most appropriate locale determined using the `best` method
+ described below.
+
+### new locale.<span class="apidocCodeKeywordSpan">Locale</span>(languageTag)
+
+The Locale constructor takes a [language tag][langtag] string consisting of an ISO-639 language abbreviation and optional two-letter
+ ISO-3166 country code, and returns an object with a `language` property containing the former and a `country` property containing
+ the latter.
+
+### locale.Locale["default"]
+
+The default locale for the environment, as parsed from `process.env.LANG`. This is used as the fallback when the best language is
+ calculated from the intersection of requested and supported locales and supported languages has not default.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales" id="apidoc.element.locale.Locales">
+        function <span class="apidocSignatureSpan">locale.</span>Locales
+        <span class="apidocSignatureSpan">(str, def)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Locales(str, def) {
+  var item, locale, q, _i, _len, _ref, _ref1;
+  if (def) {
+    this["default"] = new Locale(def);
+  }
+  if (!str) {
+    return;
+  }
+  _ref = (String(str)).split(",");
+  for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+    item = _ref[_i];
+    _ref1 = item.split(";"), locale = _ref1[0], q = _ref1[1];
+    locale = new Locale(locale.trim());
+    locale.score = q ? +q.slice(2) || 0 : 1;
+    this.push(locale);
+  }
+  this.sort(function(a, b) {
+    return b.score - a.score;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Examples
+--------
+
+### For the node.js HTTP module
+```javascript
+var http = require("http")
+, locale = require("locale")
+, supported = new locale.<span class="apidocCodeKeywordSpan">Locales</span>(["en", "en_US", "ja"])
+
+http.createServer(function(req, res) {
+var locales = new locale.Locales(req.headers["accept-language"])
+res.writeHeader(200, {"Content-Type": "text/plain"})
+res.end(
+  "You asked for: " + req.headers["accept-language"] + "\n" +
+  "We support: " + supported + "\n" +
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.locale.Locale" id="apidoc.module.locale.Locale">module locale.Locale</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locale.Locale" id="apidoc.element.locale.Locale.Locale">
+        function <span class="apidocSignatureSpan">locale.</span>Locale
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Locale(str) {
+  var country, language, match, normalized;
+  if (!(match = str != null ? str.match(/[a-z]+/gi) : void 0)) {
+    return;
+  }
+  language = match[0], country = match[1];
+  this.code = str;
+  this.language = language.toLowerCase();
+  if (country) {
+    this.country = country.toUpperCase();
+  }
+  normalized = [this.language];
+  if (this.country) {
+    normalized.push(this.country);
+  }
+  this.normalized = normalized.join("_");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+API
+---
+
+### locale(supportedLocales)
+
+This module exports a function that can be used as Express/Connect middleware. It takes one argument, a list of supported locales
+, and adds a `locale` property to incoming HTTP requests, reflecting the most appropriate locale determined using the `best` method
+ described below.
+
+### new locale.<span class="apidocCodeKeywordSpan">Locale</span>(languageTag)
+
+The Locale constructor takes a [language tag][langtag] string consisting of an ISO-639 language abbreviation and optional two-letter
+ ISO-3166 country code, and returns an object with a `language` property containing the former and a `country` property containing
+ the latter.
+
+### locale.Locale["default"]
+
+The default locale for the environment, as parsed from `process.env.LANG`. This is used as the fallback when the best language is
+ calculated from the intersection of requested and supported locales and supported languages has not default.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.locale.Locale.prototype" id="apidoc.module.locale.Locale.prototype">module locale.Locale.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locale.prototype.toJSON" id="apidoc.element.locale.Locale.prototype.toJSON">
+        function <span class="apidocSignatureSpan">locale.Locale.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  if (this.language) {
+    return this.code;
+  } else {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locale.prototype.toString" id="apidoc.element.locale.Locale.prototype.toString">
+        function <span class="apidocSignatureSpan">locale.Locale.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  if (this.language) {
+    return this.code;
+  } else {
+    return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The Locales constructor takes a string compliant with the [`Accept-Language` HTTP header][header], and returns a list of acceptible
+ locales, optionally sorted in descending order by quality score. Second argument is optional default value used as the fallback
+ when the best language is calculated. Otherwise locale.Locale["default"] is used as fallback.
+
+### locales.best([supportedLocales])
+
+This method takes the target locale and compares it against the optionally provided list of supported locales, and returns the most
+ appropriate locale based on the quality scores of the target locale.  If no exact match exists (i.e. language+country) then it
+will fallback to `language` if supported, or if the language isn't supported it will return the default locale.
+
+    supported = new locale.Locales(['en', 'en_US'], 'en');
+    (new locale.Locales('en')).best(supported).<span class="apidocCodeKeywordSpan">toString</span>();     // 'en&amp;#
+x27;
+    (new locale.Locales('en_GB')).best(supported).toString();  // 'en'
+    (new locale.Locales('en_US')).best(supported).toString();  // 'en_US'
+    (new locale.Locales('jp')).best(supported);                // supported.default || locale.Locale["default"
+;]
+
+
+Copyright
+---------
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.locale.Locales" id="apidoc.module.locale.Locales">module locale.Locales</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.Locales" id="apidoc.element.locale.Locales.Locales">
+        function <span class="apidocSignatureSpan">locale.</span>Locales
+        <span class="apidocSignatureSpan">(str, def)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Locales(str, def) {
+  var item, locale, q, _i, _len, _ref, _ref1;
+  if (def) {
+    this["default"] = new Locale(def);
+  }
+  if (!str) {
+    return;
+  }
+  _ref = (String(str)).split(",");
+  for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {
+    item = _ref[_i];
+    _ref1 = item.split(";"), locale = _ref1[0], q = _ref1[1];
+    locale = new Locale(locale.trim());
+    locale.score = q ? +q.slice(2) || 0 : 1;
+    this.push(locale);
+  }
+  this.sort(function(a, b) {
+    return b.score - a.score;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Examples
+--------
+
+### For the node.js HTTP module
+```javascript
+var http = require("http")
+, locale = require("locale")
+, supported = new locale.<span class="apidocCodeKeywordSpan">Locales</span>(["en", "en_US", "ja"])
+
+http.createServer(function(req, res) {
+var locales = new locale.Locales(req.headers["accept-language"])
+res.writeHeader(200, {"Content-Type": "text/plain"})
+res.end(
+  "You asked for: " + req.headers["accept-language"] + "\n" +
+  "We support: " + supported + "\n" +
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.locale.Locales.prototype" id="apidoc.module.locale.Locales.prototype">module locale.Locales.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.best" id="apidoc.element.locale.Locales.prototype.best">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>best
+        <span class="apidocSignatureSpan">(locales)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">best = function (locales) {
+  var index, item, l, languageIndex, locale, normalizedIndex, setLocale, _i, _j, _len, _len1;
+  setLocale = function(l) {
+    var r;
+    r = l;
+    r.defaulted = false;
+    return r;
+  };
+  locale = Locale["default"];
+  if (locales &amp;&amp; locales["default"]) {
+    locale = locales["default"];
+  }
+  locale.defaulted = true;
+  if (!locales) {
+    if (this[0]) {
+      locale = this[0];
+      locale.defaulted = true;
+    }
+    return locale;
+  }
+  index = locales.index();
+  for (_i = 0, _len = this.length; _i &lt; _len; _i++) {
+    item = this[_i];
+    normalizedIndex = index[item.normalized];
+    languageIndex = index[item.language];
+    if (normalizedIndex != null) {
+      return setLocale(locales[normalizedIndex]);
+    } else if (languageIndex != null) {
+      return setLocale(locales[languageIndex]);
+    } else {
+      for (_j = 0, _len1 = locales.length; _j &lt; _len1; _j++) {
+        l = locales[_j];
+        if (l.language === item.language) {
+          return setLocale(l);
+        }
+      }
+    }
+  }
+  return locale;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+http.createServer(function(req, res) {
+  var locales = new locale.Locales(req.headers["accept-language"])
+  res.writeHeader(200, {"Content-Type": "text/plain"})
+  res.end(
+    "You asked for: " + req.headers["accept-language"] + "\n" +
+    "We support: " + supported + "\n" +
+    "Our default is: " + locale.Locale["default"] + "\n" +
+    "The best match is: " + locales.<span class="apidocCodeKeywordSpan">best</span>(supported) + "\n"
+  )
+}).listen(8000)
+```
+
+### For Connect/Express
+```javascript
+var http = require("http")
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.index" id="apidoc.element.locale.Locales.prototype.index">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>index
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function () {
+  var idx, locale, _i, _len;
+  if (!this._index) {
+    this._index = {};
+    for (idx = _i = 0, _len = this.length; _i &lt; _len; idx = ++_i) {
+      locale = this[idx];
+      this._index[locale.normalized] = idx;
+    }
+  }
+  return this._index;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.push" id="apidoc.element.locale.Locales.prototype.push">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>push
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function push() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.sort" id="apidoc.element.locale.Locales.prototype.sort">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>sort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sort() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.toJSON" id="apidoc.element.locale.Locales.prototype.toJSON">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toJSON = function () {
+  return __slice.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.locale.Locales.prototype.toString" id="apidoc.element.locale.Locales.prototype.toString">
+        function <span class="apidocSignatureSpan">locale.Locales.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return String(this.toJSON());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+The Locales constructor takes a string compliant with the [`Accept-Language` HTTP header][header], and returns a list of acceptible
+ locales, optionally sorted in descending order by quality score. Second argument is optional default value used as the fallback
+ when the best language is calculated. Otherwise locale.Locale["default"] is used as fallback.
+
+### locales.best([supportedLocales])
+
+This method takes the target locale and compares it against the optionally provided list of supported locales, and returns the most
+ appropriate locale based on the quality scores of the target locale.  If no exact match exists (i.e. language+country) then it
+will fallback to `language` if supported, or if the language isn't supported it will return the default locale.
+
+    supported = new locale.Locales(['en', 'en_US'], 'en');
+    (new locale.Locales('en')).best(supported).<span class="apidocCodeKeywordSpan">toString</span>();     // 'en&amp;#
+x27;
+    (new locale.Locales('en_GB')).best(supported).toString();  // 'en'
+    (new locale.Locales('en_US')).best(supported).toString();  // 'en_US'
+    (new locale.Locales('jp')).best(supported);                // supported.default || locale.Locale["default"
+;]
+
+
+Copyright
+---------
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
